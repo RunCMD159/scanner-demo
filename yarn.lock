@@ -4550,6 +4550,13 @@ neo-async@^2.6.2:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
+ngx-scanner-qrcode@^1.6.9:
+  version "1.6.9"
+  resolved "https://registry.yarnpkg.com/ngx-scanner-qrcode/-/ngx-scanner-qrcode-1.6.9.tgz#cd1a71782d914a185f1c820ea363cf34fe98c5ab"
+  integrity sha512-tI9ls/DQfroWODi9ttx2C42iCrvdRKafgw2tFQWe3JO6DxyeDPbW4kFHcLh9erqO4z5MA9IaVvpFn9gDz5WCiA==
+  dependencies:
+    tslib "^2.3.0"
+
 nice-napi@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/nice-napi/-/nice-napi-1.0.2.tgz#dc0ab5a1eac20ce548802fc5686eaa6bc654927b"
