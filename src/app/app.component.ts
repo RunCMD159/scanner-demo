@@ -1,12 +1,12 @@
 import {Component} from '@angular/core';
-import {LOAD_WASM, NgxScannerQrcodeModule} from "ngx-scanner-qrcode";
-import {AsyncPipe, JsonPipe} from "@angular/common";
+import {LOAD_WASM} from "ngx-scanner-qrcode";
+import {RouterOutlet} from "@angular/router";
 
 LOAD_WASM().subscribe();
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NgxScannerQrcodeModule, AsyncPipe, JsonPipe],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
