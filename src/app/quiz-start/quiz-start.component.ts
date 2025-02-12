@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import {ScannerComponent} from "../scanner/scanner.component";
-import {FormControl, FormGroup, FormsModule, NgForm} from "@angular/forms";
+import {ScannerComponent} from '../scanner/scanner.component';
+import {FormsModule, NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-quiz-start',
@@ -12,9 +12,12 @@ import {FormControl, FormGroup, FormsModule, NgForm} from "@angular/forms";
   styleUrl: './quiz-start.component.scss'
 })
 export class QuizStartComponent {
-  playername ='';
+  playername = '';
+  players: Set<string> = new Set<string>();
 
-  onSubmit(playerForm: NgForm) {
-    console.log(playerForm)
+
+  onSubmit() {
+    this.players.add(this.playername);
+    this.playername = '';
   }
 }

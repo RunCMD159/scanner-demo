@@ -1,0 +1,19 @@
+@if (currentQuestionIndex < quizData.length) {
+  <div>
+    <h2>{{ quizData[currentQuestionIndex].question }}</h2>
+    <div class="options-container">
+      @for (option of quizData[currentQuestionIndex].options; track $index) {
+        <div [class]="'option-'+$index">
+          <button (click)="selectOption(option)" [class.selected]="option === selectedOption">{{ option }}</button>
+        </div>
+      }
+    </div>
+    <button (click)="submitAnswer()">Submit</button>
+  </div>
+} @else {
+  <div>
+    <h2>Quiz Completed!</h2>
+    <p>Your score: {{ score }}/{{ quizData.length }}</p>
+    <button (click)="restartQuiz()">Restart Quiz</button>
+  </div>
+}

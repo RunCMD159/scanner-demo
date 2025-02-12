@@ -1,12 +1,20 @@
 <div class="container">
-  <div class="add-player-container">
-    <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
-      <div>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" [(ngModel)]="playername" required>
-      </div>
-      <button type="submit" [disabled]="f.invalid">Absenden</button>
-    </form>
+  <div class="player-settings-container">
+    <div class="add-player-container">
+      <form #f="ngForm" (ngSubmit)="onSubmit()" novalidate>
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" [(ngModel)]="playername" required>
+        </div>
+        <button type="submit" [disabled]="f.invalid">Absenden</button>
+      </form>
+    </div>
+    <div>
+      Current Players:
+      @for (name of players; track $index) {
+        <div>{{ name }}</div>
+      }
+    </div>
   </div>
   <app-scanner></app-scanner>
 </div>
